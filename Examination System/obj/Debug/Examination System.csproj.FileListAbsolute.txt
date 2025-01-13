@@ -1,0 +1,14 @@
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\bin\Debug\Examination System.exe.config
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\bin\Debug\Examination System.exe
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\bin\Debug\Examination System.pdb
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination System.csproj.AssemblyReference.cache
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.Properties.Resources.resources
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination System.csproj.GenerateResource.cache
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination System.csproj.CoreCompileInputs.cache
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination System.exe
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination System.pdb
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.Start.resources
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\bin\Debug\CircularProgressBar.dll
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\bin\Debug\WinFormAnimation.dll
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\bin\Debug\CircularProgressBar.xml
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examinat.E6666740.Up2Date
