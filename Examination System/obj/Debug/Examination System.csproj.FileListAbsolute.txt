@@ -12,3 +12,6 @@ D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Adv
 D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\bin\Debug\WinFormAnimation.dll
 D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\bin\Debug\CircularProgressBar.xml
 D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examinat.E6666740.Up2Date
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.view.Login.resources
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.view.admin.LoginAdmin.resources
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.view.SignUpAdmin.resources
