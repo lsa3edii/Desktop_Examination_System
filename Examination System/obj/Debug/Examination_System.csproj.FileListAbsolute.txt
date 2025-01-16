@@ -15,3 +15,16 @@ D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Adv
 D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examinat.42BE0C5D.Up2Date
 D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination System.exe
 D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination System.pdb
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.view.Prompt.resources
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.view.student.Home.resources
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.view.instractor.Home.resources
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.view.admin.Home.resources
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.view.admin.Information.resources
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.view.admin.ManageInstractors.resources
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.view.admin.ManageStudents.resources
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.view.instractor.Information.resources
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.view.instractor.MakeExam.resources
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.view.instractor.ShowResult.resources
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.view.student.Information.resources
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.view.student.ShowResult.resources
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.view.student.TakeExam.resources

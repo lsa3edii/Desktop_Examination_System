@@ -36,8 +36,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.admin_btn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.instractor_rbtn = new System.Windows.Forms.RadioButton();
             this.student_rbtn = new System.Windows.Forms.RadioButton();
+            this.instractor_rbtn = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
             this.email = new System.Windows.Forms.TextBox();
             this.password = new System.Windows.Forms.TextBox();
@@ -130,20 +130,6 @@
             this.panel2.Size = new System.Drawing.Size(200, 83);
             this.panel2.TabIndex = 4;
             // 
-            // instractor_rbtn
-            // 
-            this.instractor_rbtn.AutoSize = true;
-            this.instractor_rbtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.instractor_rbtn.Font = new System.Drawing.Font("Century Schoolbook", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.instractor_rbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(0)))), ((int)(((byte)(21)))));
-            this.instractor_rbtn.Location = new System.Drawing.Point(20, 3);
-            this.instractor_rbtn.Name = "instractor_rbtn";
-            this.instractor_rbtn.Size = new System.Drawing.Size(164, 33);
-            this.instractor_rbtn.TabIndex = 0;
-            this.instractor_rbtn.TabStop = true;
-            this.instractor_rbtn.Text = "Instractor";
-            this.instractor_rbtn.UseVisualStyleBackColor = true;
-            // 
             // student_rbtn
             // 
             this.student_rbtn.AutoSize = true;
@@ -157,6 +143,22 @@
             this.student_rbtn.TabStop = true;
             this.student_rbtn.Text = "Student";
             this.student_rbtn.UseVisualStyleBackColor = true;
+            this.student_rbtn.CheckedChanged += new System.EventHandler(this.student_rbtn_CheckedChanged);
+            // 
+            // instractor_rbtn
+            // 
+            this.instractor_rbtn.AutoSize = true;
+            this.instractor_rbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.instractor_rbtn.Font = new System.Drawing.Font("Century Schoolbook", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.instractor_rbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(0)))), ((int)(((byte)(21)))));
+            this.instractor_rbtn.Location = new System.Drawing.Point(20, 3);
+            this.instractor_rbtn.Name = "instractor_rbtn";
+            this.instractor_rbtn.Size = new System.Drawing.Size(164, 33);
+            this.instractor_rbtn.TabIndex = 0;
+            this.instractor_rbtn.TabStop = true;
+            this.instractor_rbtn.Text = "Instractor";
+            this.instractor_rbtn.UseVisualStyleBackColor = true;
+            this.instractor_rbtn.CheckedChanged += new System.EventHandler(this.instractor_rbtn_CheckedChanged);
             // 
             // label3
             // 

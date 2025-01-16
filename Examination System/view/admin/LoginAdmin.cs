@@ -15,7 +15,26 @@ namespace Examination_System.view.admin
         public LoginAdmin()
         {
             InitializeComponent();
+
+            setDisabledItems();
+            password.UseSystemPasswordChar = true;
         }
+
+        private void setDisabledItems()
+        {
+            login_btn.Enabled = false;
+            clear_btn.Enabled = false;
+        }
+
+        private void setEnabledItems()
+        {
+            login_btn.Enabled = true;
+            clear_btn.Enabled = true;
+        }
+
+
+        ////////////////////////////////////////////////////////////
+
 
         private void exit_Click(object sender, EventArgs e)
         {
@@ -36,12 +55,35 @@ namespace Examination_System.view.admin
 
         private void login_btn_Click(object sender, EventArgs e)
         {
+            if (true) ///
+            {
+                MessageBox.Show("Successfuly Login !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                this.Close();
+                new admin.Home().Show();
+            }
         }
 
         private void clear_btn_Click(object sender, EventArgs e)
         {
+            email.Text = "";
+            password.Text = "";
+        }
 
+        private void email_TextChanged(object sender, EventArgs e)
+        {
+            if(email.Text.Equals("") || password.Text.Equals(""))
+                setDisabledItems();
+            else
+                setEnabledItems();
+        }
+
+        private void password_TextChanged(object sender, EventArgs e)
+        {
+            if (email.Text.Equals("") || password.Text.Equals(""))
+                setDisabledItems();
+            else
+                setEnabledItems();
         }
     }
 }

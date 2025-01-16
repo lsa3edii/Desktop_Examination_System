@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginAdmin));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.back = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.exit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,7 +42,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.email = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.back = new System.Windows.Forms.Button();
             this.signup_btn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -58,6 +58,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(559, 256);
             this.panel1.TabIndex = 12;
+            // 
+            // back
+            // 
+            this.back.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.back.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.back.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(0)))), ((int)(((byte)(21)))));
+            this.back.Location = new System.Drawing.Point(6, 14);
+            this.back.Name = "back";
+            this.back.Size = new System.Drawing.Size(56, 34);
+            this.back.TabIndex = 3;
+            this.back.Text = "←";
+            this.back.UseVisualStyleBackColor = true;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // pictureBox1
             // 
@@ -148,6 +161,7 @@
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(360, 35);
             this.password.TabIndex = 19;
+            this.password.TextChanged += new System.EventHandler(this.password_TextChanged);
             // 
             // label4
             // 
@@ -168,6 +182,7 @@
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(360, 35);
             this.email.TabIndex = 17;
+            this.email.TextChanged += new System.EventHandler(this.email_TextChanged);
             // 
             // label3
             // 
@@ -179,19 +194,6 @@
             this.label3.Size = new System.Drawing.Size(84, 28);
             this.label3.TabIndex = 16;
             this.label3.Text = "Email";
-            // 
-            // back
-            // 
-            this.back.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.back.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.back.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(0)))), ((int)(((byte)(21)))));
-            this.back.Location = new System.Drawing.Point(6, 14);
-            this.back.Name = "back";
-            this.back.Size = new System.Drawing.Size(56, 34);
-            this.back.TabIndex = 3;
-            this.back.Text = "←";
-            this.back.UseVisualStyleBackColor = true;
-            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // signup_btn
             // 

@@ -151,6 +151,7 @@
             this.confirmPassword.Name = "confirmPassword";
             this.confirmPassword.Size = new System.Drawing.Size(360, 35);
             this.confirmPassword.TabIndex = 29;
+            this.confirmPassword.TextChanged += new System.EventHandler(this.confirmPassword_TextChanged);
             // 
             // label4
             // 
@@ -171,6 +172,7 @@
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(360, 35);
             this.password.TabIndex = 27;
+            this.password.TextChanged += new System.EventHandler(this.password_TextChanged);
             // 
             // label3
             // 
@@ -196,6 +198,7 @@
             this.createAcc_btn.TabIndex = 33;
             this.createAcc_btn.Text = "Create Account";
             this.createAcc_btn.UseVisualStyleBackColor = false;
+            this.createAcc_btn.Click += new System.EventHandler(this.createAcc_btn_Click);
             // 
             // username
             // 
@@ -205,6 +208,7 @@
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(360, 35);
             this.username.TabIndex = 35;
+            this.username.TextChanged += new System.EventHandler(this.username_TextChanged);
             // 
             // label5
             // 
@@ -225,6 +229,7 @@
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(360, 35);
             this.email.TabIndex = 37;
+            this.email.TextChanged += new System.EventHandler(this.email_TextChanged);
             // 
             // label6
             // 

@@ -16,5 +16,34 @@ namespace Examination_System.view.admin
         {
             InitializeComponent();
         }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void logout_btn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new LoginAdmin().Show();
+        }
+
+        private void info_btn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new Information().Show();
+        }
+
+        private void instractor_btn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new ManageInstractors().Show();
+        }
+
+        private void student_btn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new ManageStudents().Show();
+        }
     }
 }

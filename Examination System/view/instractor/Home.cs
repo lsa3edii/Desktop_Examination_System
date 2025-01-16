@@ -16,5 +16,34 @@ namespace Examination_System.view.instractor
         {
             InitializeComponent();
         }
+
+        private void exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void logout_btn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new Login().Show();
+        }
+
+        private void info_btn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new Information().Show();
+        }
+
+        private void exam_btn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new MakeExam().Show();
+        }
+
+        private void result_btn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new ShowResult().Show();
+        }
     }
 }

@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="controller\DatabaseConnection.cs" />
+    <Compile Include="controller\TableData.cs" />
     <Compile Include="model\Admin.cs" />
     <Compile Include="model\User.cs" />
     <Compile Include="view\admin\Home.cs">
@@ -61,17 +62,59 @@
     <Compile Include="view\admin\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\admin\Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\admin\Information.Designer.cs">
+      <DependentUpon>Information.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\admin\LoginAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="view\admin\LoginAdmin.Designer.cs">
       <DependentUpon>LoginAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\admin\ManageInstractors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\admin\ManageInstractors.Designer.cs">
+      <DependentUpon>ManageInstractors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\admin\ManageStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\admin\ManageStudents.Designer.cs">
+      <DependentUpon>ManageStudents.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\instractor\Home.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="view\instractor\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\instractor\Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\instractor\Information.Designer.cs">
+      <DependentUpon>Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\instractor\MakeExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\instractor\MakeExam.Designer.cs">
+      <DependentUpon>MakeExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\instractor\ShowResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\instractor\ShowResult.Designer.cs">
+      <DependentUpon>ShowResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\Prompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\Prompt.Designer.cs">
+      <DependentUpon>Prompt.cs</DependentUpon>
     </Compile>
     <Compile Include="view\Start.cs">
       <SubType>Form</SubType>
@@ -99,6 +142,24 @@
     <Compile Include="view\student\Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
+    <Compile Include="view\student\Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\student\Information.Designer.cs">
+      <DependentUpon>Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\student\ShowResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\student\ShowResult.Designer.cs">
+      <DependentUpon>ShowResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\student\TakeExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\student\TakeExam.Designer.cs">
+      <DependentUpon>TakeExam.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -108,17 +169,56 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="view\admin\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\admin\Information.resx">
+      <DependentUpon>Information.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\admin\LoginAdmin.resx">
       <DependentUpon>LoginAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\admin\ManageInstractors.resx">
+      <DependentUpon>ManageInstractors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\admin\ManageStudents.resx">
+      <DependentUpon>ManageStudents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="view\admin\SignUpAdmin.resx">
       <DependentUpon>SignUpAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\instractor\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\instractor\Information.resx">
+      <DependentUpon>Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\instractor\MakeExam.resx">
+      <DependentUpon>MakeExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\instractor\ShowResult.resx">
+      <DependentUpon>ShowResult.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="view\Prompt.resx">
+      <DependentUpon>Prompt.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\Start.resx">
       <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\student\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\student\Information.resx">
+      <DependentUpon>Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\student\ShowResult.resx">
+      <DependentUpon>ShowResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\student\TakeExam.resx">
+      <DependentUpon>TakeExam.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
