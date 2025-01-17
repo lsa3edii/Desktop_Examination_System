@@ -214,9 +214,9 @@
             // 
             this.name.Font = new System.Drawing.Font("Century Schoolbook", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(0)))), ((int)(((byte)(21)))));
-            this.name.Location = new System.Drawing.Point(118, 159);
+            this.name.Location = new System.Drawing.Point(130, 159);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(394, 32);
+            this.name.Size = new System.Drawing.Size(382, 32);
             this.name.TabIndex = 28;
             // 
             // label4
@@ -234,9 +234,9 @@
             // 
             this.email.Font = new System.Drawing.Font("Century Schoolbook", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(0)))), ((int)(((byte)(21)))));
-            this.email.Location = new System.Drawing.Point(118, 216);
+            this.email.Location = new System.Drawing.Point(130, 216);
             this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(394, 32);
+            this.email.Size = new System.Drawing.Size(382, 32);
             this.email.TabIndex = 32;
             // 
             // label6
@@ -254,9 +254,9 @@
             // 
             this.salary.Font = new System.Drawing.Font("Century Schoolbook", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(0)))), ((int)(((byte)(21)))));
-            this.salary.Location = new System.Drawing.Point(118, 335);
+            this.salary.Location = new System.Drawing.Point(130, 335);
             this.salary.Name = "salary";
-            this.salary.Size = new System.Drawing.Size(394, 32);
+            this.salary.Size = new System.Drawing.Size(382, 32);
             this.salary.TabIndex = 34;
             // 
             // label7
@@ -285,9 +285,9 @@
             // 
             this.phone.Font = new System.Drawing.Font("Century Schoolbook", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(0)))), ((int)(((byte)(21)))));
-            this.phone.Location = new System.Drawing.Point(118, 275);
+            this.phone.Location = new System.Drawing.Point(130, 275);
             this.phone.Name = "phone";
-            this.phone.Size = new System.Drawing.Size(394, 32);
+            this.phone.Size = new System.Drawing.Size(382, 32);
             this.phone.TabIndex = 36;
             // 
             // ManageInstractors

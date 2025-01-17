@@ -35,15 +35,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.exit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.students_table = new System.Windows.Forms.DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.search = new System.Windows.Forms.TextBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.students_table)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(0)))), ((int)(((byte)(21)))));
-            this.panel2.Location = new System.Drawing.Point(-9, 839);
+            this.panel2.Location = new System.Drawing.Point(-9, 814);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1465, 26);
+            this.panel2.Size = new System.Drawing.Size(1217, 26);
             this.panel2.TabIndex = 70;
             // 
             // panel1
@@ -55,7 +61,7 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-6, -5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1465, 119);
+            this.panel1.Size = new System.Drawing.Size(1214, 119);
             this.panel1.TabIndex = 69;
             // 
             // back
@@ -76,18 +82,18 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Schoolbook", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(575, 63);
+            this.label2.Location = new System.Drawing.Point(443, 60);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(270, 39);
+            this.label2.Size = new System.Drawing.Size(286, 39);
             this.label2.TabIndex = 2;
-            this.label2.Text = "\" Show Result \"";
+            this.label2.Text = "\" Show Results \"";
             // 
             // exit
             // 
             this.exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.exit.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(0)))), ((int)(((byte)(21)))));
-            this.exit.Location = new System.Drawing.Point(1373, 16);
+            this.exit.Location = new System.Drawing.Point(1122, 17);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(75, 36);
             this.exit.TabIndex = 1;
@@ -100,18 +106,65 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Schoolbook", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(529, 14);
+            this.label1.Location = new System.Drawing.Point(402, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(366, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Examination System";
+            // 
+            // students_table
+            // 
+            this.students_table.AllowUserToAddRows = false;
+            this.students_table.AllowUserToDeleteRows = false;
+            this.students_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.students_table.Location = new System.Drawing.Point(9, 167);
+            this.students_table.Name = "students_table";
+            this.students_table.ReadOnly = true;
+            this.students_table.RowHeadersWidth = 51;
+            this.students_table.RowTemplate.Height = 24;
+            this.students_table.Size = new System.Drawing.Size(1180, 577);
+            this.students_table.TabIndex = 72;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Schoolbook", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(0)))), ((int)(((byte)(21)))));
+            this.label3.Location = new System.Drawing.Point(508, 124);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(167, 39);
+            this.label3.TabIndex = 71;
+            this.label3.Text = "Students";
+            // 
+            // search
+            // 
+            this.search.Font = new System.Drawing.Font("Century Schoolbook", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.search.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(0)))), ((int)(((byte)(21)))));
+            this.search.Location = new System.Drawing.Point(323, 763);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(623, 35);
+            this.search.TabIndex = 73;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(266, 762);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 74;
+            this.pictureBox2.TabStop = false;
             // 
             // ShowResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1450, 860);
+            this.ClientSize = new System.Drawing.Size(1200, 839);
+            this.Controls.Add(this.search);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.students_table);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -121,7 +174,10 @@
             this.Text = "Examination System";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.students_table)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -133,5 +189,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button exit;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView students_table;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox search;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

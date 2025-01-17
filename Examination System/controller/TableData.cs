@@ -16,34 +16,19 @@ namespace Examination_System.controller
 
         public static void show(String tableName, DataGridView table)
         {
-            using (SqlConnection connection = controller.DatabaseConnection.GetConnection())
-            {
-                if (connection == null)
-                    return;
-
-                try
-                {
-                    string query = "select * from " + tableName;
-
-                    using (SqlCommand command = new SqlCommand(query, connection))
-                    {
-                        SqlDataAdapter adapter = new SqlDataAdapter(command);
-                        DataTable dataTable = new DataTable();
-                        
-                        adapter.Fill(dataTable);
-                        table.DataSource = dataTable;
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                
-            }
+            string query = "select * from " + tableName;
+            getData(query, table);
         }
 
 
         public static void showAfterSearch(String tableName, string search, DataGridView table)
+        {
+            string query = "select * from " + tableName + " where st_fname like '%" + search + "%'";
+            getData(query, table);
+        }
+
+
+        private static void getData(String query, DataGridView table)
         {
             using (SqlConnection connection = controller.DatabaseConnection.GetConnection())
             {
@@ -52,8 +37,6 @@ namespace Examination_System.controller
 
                 try
                 {
-                    string query = "select * from " + tableName + " where st_fname like '%" + search + "%'";
-
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         SqlDataAdapter adapter = new SqlDataAdapter(command);
@@ -67,7 +50,7 @@ namespace Examination_System.controller
                 {
                     MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                
+
             }
         }
 

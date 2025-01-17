@@ -162,7 +162,7 @@
             this.result_btn.Name = "result_btn";
             this.result_btn.Size = new System.Drawing.Size(353, 49);
             this.result_btn.TabIndex = 20;
-            this.result_btn.Text = "Show Result";
+            this.result_btn.Text = "Show Results";
             this.result_btn.UseVisualStyleBackColor = false;
             this.result_btn.Click += new System.EventHandler(this.result_btn_Click);
             // 

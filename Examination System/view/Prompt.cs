@@ -51,7 +51,7 @@ namespace Examination_System.view
         {
             string userInput = password.Text;
             
-            if(userInput == "12345")
+            if(userInput == "admin")
             {
                 this.Close();
                 loginForm.Close();

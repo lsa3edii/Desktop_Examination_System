@@ -45,5 +45,29 @@ namespace Examination_System.view.admin
             this.Close();
             new ManageStudents().Show();
         }
+
+        private void branchTrack_btn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new Branches_Tracks().Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new Courses_Topics().Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new Assign_Instractors().Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new Assign_Students().Show();
+        }
     }
 }

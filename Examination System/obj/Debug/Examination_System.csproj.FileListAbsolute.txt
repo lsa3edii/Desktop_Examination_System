@@ -28,3 +28,7 @@ D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Adv
 D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.view.student.Information.resources
 D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.view.student.ShowResult.resources
 D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.view.student.TakeExam.resources
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.view.admin.Branches_Tracks.resources
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.view.admin.Assign_Instractors.resources
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.view.admin.Assign_Students.resources
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.view.admin.Courses_Topics.resources

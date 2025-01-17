@@ -56,6 +56,30 @@
     <Compile Include="controller\TableData.cs" />
     <Compile Include="model\Admin.cs" />
     <Compile Include="model\User.cs" />
+    <Compile Include="view\admin\Assign_Instractors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\admin\Assign_Instractors.Designer.cs">
+      <DependentUpon>Assign_Instractors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\admin\Assign_Students.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\admin\Assign_Students.Designer.cs">
+      <DependentUpon>Assign_Students.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\admin\Branches_Tracks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\admin\Branches_Tracks.Designer.cs">
+      <DependentUpon>Branches_Tracks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="view\admin\Courses_Topics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="view\admin\Courses_Topics.Designer.cs">
+      <DependentUpon>Courses_Topics.cs</DependentUpon>
+    </Compile>
     <Compile Include="view\admin\Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +193,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="view\admin\Assign_Instractors.resx">
+      <DependentUpon>Assign_Instractors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\admin\Assign_Students.resx">
+      <DependentUpon>Assign_Students.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\admin\Branches_Tracks.resx">
+      <DependentUpon>Branches_Tracks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="view\admin\Courses_Topics.resx">
+      <DependentUpon>Courses_Topics.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="view\admin\Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
