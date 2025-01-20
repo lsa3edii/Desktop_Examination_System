@@ -52,6 +52,8 @@
             this.delete_btn = new System.Windows.Forms.Button();
             this.update_btn = new System.Windows.Forms.Button();
             this.insert_btn = new System.Windows.Forms.Button();
+            this.course_exam = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -141,9 +143,9 @@
             "8)",
             "9)",
             "10)"});
-            this.question_no.Location = new System.Drawing.Point(195, 132);
+            this.question_no.Location = new System.Drawing.Point(195, 174);
             this.question_no.Name = "question_no";
-            this.question_no.Size = new System.Drawing.Size(162, 32);
+            this.question_no.Size = new System.Drawing.Size(196, 32);
             this.question_no.TabIndex = 70;
             this.question_no.Tag = "";
             this.question_no.SelectedIndexChanged += new System.EventHandler(this.quesion_no_SelectedIndexChanged);
@@ -153,7 +155,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Schoolbook", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(0)))), ((int)(((byte)(21)))));
-            this.label9.Location = new System.Drawing.Point(13, 137);
+            this.label9.Location = new System.Drawing.Point(13, 179);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(142, 24);
             this.label9.TabIndex = 69;
@@ -168,10 +170,10 @@
             this.question_type.FormattingEnabled = true;
             this.question_type.Items.AddRange(new object[] {
             "MCQ",
-            "TF"});
-            this.question_type.Location = new System.Drawing.Point(195, 184);
+            "T/F"});
+            this.question_type.Location = new System.Drawing.Point(195, 224);
             this.question_type.Name = "question_type";
-            this.question_type.Size = new System.Drawing.Size(162, 32);
+            this.question_type.Size = new System.Drawing.Size(196, 32);
             this.question_type.TabIndex = 72;
             this.question_type.Tag = "";
             this.question_type.SelectedIndexChanged += new System.EventHandler(this.question_type_SelectedIndexChanged);
@@ -181,7 +183,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Schoolbook", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(0)))), ((int)(((byte)(21)))));
-            this.label3.Location = new System.Drawing.Point(13, 189);
+            this.label3.Location = new System.Drawing.Point(13, 229);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(155, 24);
             this.label3.TabIndex = 71;
@@ -335,12 +337,39 @@
             this.insert_btn.UseVisualStyleBackColor = false;
             this.insert_btn.Click += new System.EventHandler(this.insert_btn_Click);
             // 
+            // course_exam
+            // 
+            this.course_exam.BackColor = System.Drawing.Color.White;
+            this.course_exam.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.course_exam.Font = new System.Drawing.Font("Century Schoolbook", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.course_exam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(0)))), ((int)(((byte)(21)))));
+            this.course_exam.FormattingEnabled = true;
+            this.course_exam.Location = new System.Drawing.Point(195, 125);
+            this.course_exam.Name = "course_exam";
+            this.course_exam.Size = new System.Drawing.Size(196, 32);
+            this.course_exam.TabIndex = 87;
+            this.course_exam.Tag = "";
+            this.course_exam.SelectedIndexChanged += new System.EventHandler(this.exam_course_SelectedIndexChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Schoolbook", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(0)))), ((int)(((byte)(21)))));
+            this.label10.Location = new System.Drawing.Point(15, 131);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(146, 24);
+            this.label10.TabIndex = 86;
+            this.label10.Text = "Course Exam";
+            // 
             // MakeExam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1612, 860);
+            this.Controls.Add(this.course_exam);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.delete_btn);
             this.Controls.Add(this.update_btn);
             this.Controls.Add(this.insert_btn);
@@ -397,5 +426,7 @@
         private System.Windows.Forms.Button delete_btn;
         private System.Windows.Forms.Button update_btn;
         private System.Windows.Forms.Button insert_btn;
+        private System.Windows.Forms.ComboBox course_exam;
+        private System.Windows.Forms.Label label10;
     }
 }

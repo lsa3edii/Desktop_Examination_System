@@ -32,3 +32,8 @@ D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Adv
 D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.view.admin.Assign_Instractors.resources
 D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.view.admin.Assign_Students.resources
 D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.view.admin.Courses_Topics.resources
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.view.instractor.ExamStatus.resources
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\bin\Debug\BouncyCastle.Cryptography.dll
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\bin\Debug\itextsharp.dll
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\bin\Debug\BouncyCastle.Cryptography.xml
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\bin\Debug\itextsharp.xml

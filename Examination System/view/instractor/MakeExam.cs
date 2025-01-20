@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
+using Examination_System.controller;
+
 namespace Examination_System.view.instractor
 {
     public partial class MakeExam : Form
@@ -16,16 +18,15 @@ namespace Examination_System.view.instractor
         public MakeExam()
         {
             InitializeComponent();
-            setDisabledItems();
+
+            setDisabledQuestion();
+            setDisabledItems2();
+            TableData.fillComboBox(course_exam);
         }
 
-        private void setDisabledItems()
+        private void setDisabledQuestion()
         {
             question.Enabled = false;
-            option_a.Enabled = false;
-            option_b.Enabled = false;
-            option_c.Enabled = false;
-            option_d.Enabled = false;
         }
 
         private void setDisabledItems2()
@@ -62,10 +63,10 @@ namespace Examination_System.view.instractor
 
         private void quesion_no_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (question_no.Text != string.Empty && question_type.Text != string.Empty)
+            if (question_no.Text != string.Empty && question_type.Text != string.Empty && question_type.Text != string.Empty)
             {
                 setEnabledItems();
-                if (question_type.Text == "TF")
+                if (question_type.Text == "T/F")
                 {
                     setDisabledItems2();
                     option_a.Text = "True";
@@ -78,15 +79,18 @@ namespace Examination_System.view.instractor
                 }
             }
             else
-                setDisabledItems();
+            {
+                setDisabledQuestion();
+                setDisabledItems2();
+            }
         }
 
         private void question_type_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (question_no.Text != string.Empty && question_type.Text != string.Empty)
+            if (question_no.Text != string.Empty && question_type.Text != string.Empty && course_exam.Text != string.Empty)
             {
                 setEnabledItems();
-                if (question_type.Text == "TF")
+                if (question_type.Text == "T/F")
                 {
                     setDisabledItems2();
                     option_a.Text = "True";
@@ -99,7 +103,34 @@ namespace Examination_System.view.instractor
                 }
             }
             else
-                setDisabledItems();
+            {
+                setDisabledQuestion();
+                setDisabledItems2();
+            }
+        }
+
+        private void exam_course_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (question_no.Text != string.Empty && question_type.Text != string.Empty && course_exam.Text != string.Empty)
+            {
+                setEnabledItems();
+                if (question_type.Text == "T/F")
+                {
+                    setDisabledItems2();
+                    option_a.Text = "True";
+                    option_b.Text = "False";
+                }
+                else
+                {
+                    option_a.Text = "";
+                    option_b.Text = "";
+                }
+            }
+            else
+            {
+                setDisabledQuestion();
+                setDisabledItems2();
+            }
         }
 
         private void insert_btn_Click(object sender, EventArgs e)
@@ -116,5 +147,6 @@ namespace Examination_System.view.instractor
         {
 
         }
+
     }
 }

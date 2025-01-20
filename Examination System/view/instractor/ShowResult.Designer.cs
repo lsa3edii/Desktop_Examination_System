@@ -35,21 +35,22 @@
             this.label2 = new System.Windows.Forms.Label();
             this.exit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.students_table = new System.Windows.Forms.DataGridView();
+            this.grades_table = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.search = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.report_btn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.students_table)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grades_table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(0)))), ((int)(((byte)(21)))));
-            this.panel2.Location = new System.Drawing.Point(-9, 814);
+            this.panel2.Location = new System.Drawing.Point(-9, 863);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1217, 26);
+            this.panel2.Size = new System.Drawing.Size(1217, 35);
             this.panel2.TabIndex = 70;
             // 
             // panel1
@@ -112,29 +113,29 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Examination System";
             // 
-            // students_table
+            // grades_table
             // 
-            this.students_table.AllowUserToAddRows = false;
-            this.students_table.AllowUserToDeleteRows = false;
-            this.students_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.students_table.Location = new System.Drawing.Point(9, 167);
-            this.students_table.Name = "students_table";
-            this.students_table.ReadOnly = true;
-            this.students_table.RowHeadersWidth = 51;
-            this.students_table.RowTemplate.Height = 24;
-            this.students_table.Size = new System.Drawing.Size(1180, 577);
-            this.students_table.TabIndex = 72;
+            this.grades_table.AllowUserToAddRows = false;
+            this.grades_table.AllowUserToDeleteRows = false;
+            this.grades_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grades_table.Location = new System.Drawing.Point(9, 167);
+            this.grades_table.Name = "grades_table";
+            this.grades_table.ReadOnly = true;
+            this.grades_table.RowHeadersWidth = 51;
+            this.grades_table.RowTemplate.Height = 24;
+            this.grades_table.Size = new System.Drawing.Size(1180, 577);
+            this.grades_table.TabIndex = 72;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Schoolbook", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(0)))), ((int)(((byte)(21)))));
-            this.label3.Location = new System.Drawing.Point(508, 124);
+            this.label3.Location = new System.Drawing.Point(439, 123);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(167, 39);
+            this.label3.Size = new System.Drawing.Size(297, 39);
             this.label3.TabIndex = 71;
-            this.label3.Text = "Students";
+            this.label3.Text = "Students Grades";
             // 
             // search
             // 
@@ -155,15 +156,31 @@
             this.pictureBox2.TabIndex = 74;
             this.pictureBox2.TabStop = false;
             // 
+            // report_btn
+            // 
+            this.report_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(0)))), ((int)(((byte)(21)))));
+            this.report_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.report_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.report_btn.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.report_btn.ForeColor = System.Drawing.Color.White;
+            this.report_btn.Location = new System.Drawing.Point(457, 811);
+            this.report_btn.Name = "report_btn";
+            this.report_btn.Size = new System.Drawing.Size(340, 42);
+            this.report_btn.TabIndex = 75;
+            this.report_btn.Text = "Generate Report";
+            this.report_btn.UseVisualStyleBackColor = false;
+            this.report_btn.Click += new System.EventHandler(this.report_btn_Click);
+            // 
             // ShowResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1200, 839);
+            this.ClientSize = new System.Drawing.Size(1200, 895);
+            this.Controls.Add(this.report_btn);
             this.Controls.Add(this.search);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.students_table);
+            this.Controls.Add(this.grades_table);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -174,7 +191,7 @@
             this.Text = "Examination System";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.students_table)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grades_table)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -189,9 +206,10 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button exit;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView students_table;
+        private System.Windows.Forms.DataGridView grades_table;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox search;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button report_btn;
     }
 }

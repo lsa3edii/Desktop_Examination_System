@@ -37,7 +37,14 @@ namespace Examination_System.view.student
         private void exam_btn_Click(object sender, EventArgs e)
         {
             this.Close();
-            new TakeExam().Show();
+            try
+            {
+                new TakeExam().Show();
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         private void result_btn_Click(object sender, EventArgs e)

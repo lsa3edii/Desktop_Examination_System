@@ -54,5 +54,28 @@ namespace Examination_System.controller
             }
         }
 
+
+        public static void fillComboBox(ComboBox combobox)
+        {
+            try
+            {
+                using (SqlConnection connection = controller.DatabaseConnection.GetConnection())
+                {
+                    string query = "select Crs_Name from Course";
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                            while (reader.Read())
+                                if (reader["Crs_Name"] != DBNull.Value)
+                                    combobox.Items.Add(reader["Crs_Name"].ToString());
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
     }
 }

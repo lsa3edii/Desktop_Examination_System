@@ -45,5 +45,11 @@ namespace Examination_System.view.instractor
             this.Close();
             new ShowResult().Show();
         }
+
+        private void examStatus_btn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            new ExamStatus().Show();
+        }
     }
 }
