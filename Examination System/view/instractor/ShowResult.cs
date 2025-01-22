@@ -10,8 +10,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using Examination_System.controller;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
 
 
 namespace Examination_System.view.instractor
@@ -38,74 +36,8 @@ namespace Examination_System.view.instractor
 
         private void report_btn_Click(object sender, EventArgs e)
         {
-            SaveFileDialog sfd = new SaveFileDialog
-            {
-                Filter = "PDF file|*.pdf",
-                FileName = "Students_Grades.pdf"
-            };
-
-
-            if (sfd.ShowDialog() == DialogResult.OK)
-            {
-                try
-                {
-                    using (FileStream fs = new FileStream(sfd.FileName, FileMode.Create, FileAccess.Write, FileShare.None))
-                    {
-                        Document document = new Document();
-                        PdfWriter writer = PdfWriter.GetInstance(document, fs);
-                        
-                        document.Open();
-
-
-                        iTextSharp.text.Font titleFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 16);
-                        Paragraph title = new Paragraph("Students Grades", titleFont)
-                        {
-                            Alignment = Element.ALIGN_CENTER
-                        };
-
-                        document.Add(title);
-                        document.Add(new Paragraph("\n"));
-
-                        PdfPTable table = new PdfPTable(grades_table.Columns.Count);
-
-                        foreach (DataGridViewColumn column in grades_table.Columns)
-                        {
-                            PdfPCell headerCell = new PdfPCell(new Phrase(column.HeaderText))
-                            {
-                                HorizontalAlignment = Element.ALIGN_CENTER,
-                                BackgroundColor = new BaseColor(192, 192, 192)
-                            };
-
-                            table.AddCell(headerCell);
-                        }
-
-                        foreach (DataGridViewRow row in grades_table.Rows)
-                        {
-                            if (!row.IsNewRow)
-                            {
-                                foreach (DataGridViewCell cell in row.Cells)
-                                {
-                                    table.AddCell(new Phrase(cell.Value?.ToString() ?? ""));
-                                }
-                            }
-                        }
-
-                        document.Add(table);
-
-                        document.Close();
-                        writer.Close();
-                    }
-
-                    MessageBox.Show("PDF Exported Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-            }
+            TableData.generateReport(grades_table);
         }
-
 
     }
 }

@@ -7,9 +7,13 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Windows.Forms;
 
+using iTextSharp.text.pdf;
+using iTextSharp.text;
+using System.IO;
+
 namespace Examination_System.controller
 {
-    internal class TableData
+    internal abstract class TableData
     {
 
         public TableData() { }
@@ -76,6 +80,76 @@ namespace Examination_System.controller
                 MessageBox.Show($"Error: {ex.Message}", "Database Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public static void generateReport(DataGridView table)
+        {
+            SaveFileDialog sfd = new SaveFileDialog
+            {
+                Filter = "PDF file|*.pdf",
+                FileName = "Students_Grades.pdf"
+            };
+
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    using (FileStream fs = new FileStream(sfd.FileName, FileMode.Create, FileAccess.Write, FileShare.None))
+                    {
+                        Document document = new Document();
+                        PdfWriter writer = PdfWriter.GetInstance(document, fs);
+
+                        document.Open();
+
+
+                        iTextSharp.text.Font titleFont = FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 16);
+                        Paragraph title = new Paragraph("Students Grades", titleFont)
+                        {
+                            Alignment = Element.ALIGN_CENTER
+                        };
+
+                        document.Add(title);
+                        document.Add(new Paragraph("\n"));
+
+                        PdfPTable pdfTable = new PdfPTable(table.Columns.Count);
+
+                        foreach (DataGridViewColumn column in table.Columns)
+                        {
+                            PdfPCell headerCell = new PdfPCell(new Phrase(column.HeaderText))
+                            {
+                                HorizontalAlignment = Element.ALIGN_CENTER,
+                                BackgroundColor = new BaseColor(192, 192, 192)
+                            };
+
+                            pdfTable.AddCell(headerCell);
+                        }
+
+                        foreach (DataGridViewRow row in table.Rows)
+                        {
+                            if (!row.IsNewRow)
+                            {
+                                foreach (DataGridViewCell cell in row.Cells)
+                                {
+                                    pdfTable.AddCell(new Phrase(cell.Value?.ToString() ?? ""));
+                                }
+                            }
+                        }
+
+                        document.Add(pdfTable);
+
+                        document.Close();
+                        writer.Close();
+                    }
+
+                    MessageBox.Show("PDF Exported Successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
 
     }
 }

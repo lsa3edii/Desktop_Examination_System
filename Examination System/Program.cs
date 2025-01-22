@@ -16,9 +16,9 @@ namespace Examination_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Start());
+            //Application.Run(new Start());
 
-            //Application.Run(new view.student.TakeExam());
+            Application.Run(new view.student.TakeExam());
         }
     }
 }
