@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Examination_System.model
 {
-    internal abstract class User
+    public abstract class User
     {
         private int _id;
         private string _name;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Examination_System.model
 {
-    internal class Admin : User
+    public class Admin : User
     {
         private string _confirmPassword;
 

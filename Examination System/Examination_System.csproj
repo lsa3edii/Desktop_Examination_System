@@ -58,7 +58,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="controller\AdminMethods.cs" />
     <Compile Include="controller\DatabaseConnection.cs" />
+    <Compile Include="controller\AdminRepo.cs" />
     <Compile Include="controller\TableData.cs" />
     <Compile Include="model\Admin.cs" />
     <Compile Include="model\User.cs" />

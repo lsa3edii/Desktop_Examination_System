@@ -1,4 +1,5 @@
-﻿using Examination_System.view.admin;
+﻿using Examination_System.controller;
+using Examination_System.view.admin;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,8 @@ namespace Examination_System.view
 {
     public partial class SignUpAdmin : Form
     {
+        private AdminMethods adminMethods = new AdminMethods();
+
         public SignUpAdmin()
         {
             InitializeComponent();
@@ -34,9 +37,24 @@ namespace Examination_System.view
             clear_btn.Enabled = true;
         }
 
+        private void setData()
+        {
+            adminMethods.admin.Name = username.Text;
+            adminMethods.admin.Email = email.Text;
+            adminMethods.admin.Password = password.Text;
+        }
+
+        private bool checkData()
+        {
+            if (username.Text != string.Empty && email.Text != string.Empty && password.Text != string.Empty && confirmPassword.Text != string.Empty)
+                return true;
+
+            return false;
+        }
+
 
         ////////////////////////////////////////////////////////////
-        
+
 
         private void exit_Click(object sender, EventArgs e)
         {
@@ -95,7 +113,17 @@ namespace Examination_System.view
 
         private void createAcc_btn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Account Successfuly Created !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (checkData())
+            {
+                setData();
+                adminMethods.Insert();
+
+                MessageBox.Show("Account Successfuly Created !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                this.Close();
+                new LoginAdmin().Show();
+            }
+
         }
     }
 }

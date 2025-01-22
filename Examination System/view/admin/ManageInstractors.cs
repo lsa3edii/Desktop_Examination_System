@@ -34,33 +34,7 @@ namespace Examination_System.view.admin
 
         private void insert_btn_Click(object sender, EventArgs e)
         {
-            //using (SqlConnection connection = controller.DatabaseConnection.GetConnection())
-            //{
-            //    if (connection == null) 
-            //        return;
-
-            //    try
-            //    {
-            //        string query = "INSERT INTO Instructor(Ins_Id, Ins_Name, Ins_Degree, Salary, Dept_Id) VALUES (@Ins_Id, @Ins_Name, @Ins_Degree, @Salary, @Dept_Id);";
-
-            //        using (SqlCommand command = new SqlCommand(query, connection))
-            //        {
-            //            command.Parameters.AddWithValue("@Ins_Id", 16);
-            //            command.Parameters.AddWithValue("@Ins_Name", "Muhammed");
-            //            command.Parameters.AddWithValue("@Ins_Degree", DBNull.Value);
-            //            command.Parameters.AddWithValue("@Salary", DBNull.Value);
-            //            command.Parameters.AddWithValue("@Dept_Id", 40);
-
-            //            command.ExecuteNonQuery();
-
-            //            MessageBox.Show("Insert Successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //        }
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-            //}
+            
         }
 
         private void update_btn_Click(object sender, EventArgs e)
