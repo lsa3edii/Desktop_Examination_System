@@ -15,7 +15,6 @@ namespace Examination_System.controller
 {
     internal abstract class TableData
     {
-
         public TableData() { }
 
         public static void show(String tableName, DataGridView table)
@@ -27,7 +26,7 @@ namespace Examination_System.controller
 
         public static void showAfterSearch(String tableName, string search, DataGridView table)
         {
-            string query = "select * from " + tableName + " where st_fname like '%" + search + "%'";
+            string query = "select * from " + tableName + " where name like '%" + search + "%'";
             getData(query, table);
         }
 

@@ -12,10 +12,13 @@ namespace Examination_System.view.admin
 {
     public partial class Assign_Instractors : Form
     {
-        public Assign_Instractors()
+        private Form _Home;
+
+        public Assign_Instractors(Form home)
         {
             InitializeComponent();
             setDisabledItems();
+            _Home = home;
         }
 
         private void setDisabledItems()
@@ -41,7 +44,7 @@ namespace Examination_System.view.admin
         private void back_Click(object sender, EventArgs e)
         {
             this.Close();
-            new Home().Show();
+            _Home.Visible = true;
         }
 
         private void instractor_rbtn_CheckedChanged(object sender, EventArgs e)

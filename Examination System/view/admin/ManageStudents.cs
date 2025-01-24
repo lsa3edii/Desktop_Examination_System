@@ -13,10 +13,13 @@ namespace Examination_System.view.admin
 {
     public partial class ManageStudents : Form
     {
-        public ManageStudents()
+        private Form _Home;
+
+        public ManageStudents(Form home)
         {
             InitializeComponent();
             TableData.show("student", students_table);
+            _Home = home;
         }
 
         private void exit_Click(object sender, EventArgs e)
@@ -27,7 +30,7 @@ namespace Examination_System.view.admin
         private void back_Click(object sender, EventArgs e)
         {
             this.Close();
-            new Home().Show();
+            _Home.Visible = true;
         }
 
         private void insert_btn_Click(object sender, EventArgs e)

@@ -14,10 +14,13 @@ namespace Examination_System.view.admin
 {
     public partial class Branches_Tracks : Form
     {
-        public Branches_Tracks()
+        private Form _Home;
+
+        public Branches_Tracks(Form home)
         {
             InitializeComponent();
             setDisabledItems();
+            _Home = home;
         }
 
         private void setDisabledItems()
@@ -43,7 +46,7 @@ namespace Examination_System.view.admin
         private void back_Click(object sender, EventArgs e)
         {
             this.Close();
-            new Home().Show();
+            _Home.Visible = true;
         }
 
         private void insert_btn_Click(object sender, EventArgs e)

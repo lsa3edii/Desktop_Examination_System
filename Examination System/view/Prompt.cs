@@ -20,7 +20,7 @@ namespace Examination_System.view
             this.loginForm = login;
             this.MaximizeBox = false;
 
-            //password.Focus();
+            password.Focus();
             setDisabledItems();
             password.UseSystemPasswordChar = true;            
         }

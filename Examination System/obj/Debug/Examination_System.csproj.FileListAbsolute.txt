@@ -9,7 +9,6 @@ D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Adv
 D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.view.admin.LoginAdmin.resources
 D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.view.SignUpAdmin.resources
 D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.view.Login.resources
-D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.Start.resources
 D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.csproj.GenerateResource.cache
 D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.csproj.CoreCompileInputs.cache
 D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examinat.42BE0C5D.Up2Date
@@ -37,3 +36,4 @@ D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Adv
 D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\bin\Debug\itextsharp.dll
 D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\bin\Debug\BouncyCastle.Cryptography.xml
 D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\bin\Debug\itextsharp.xml
+D:\ITI\Professional Development & Business Intelligence-infused CRM\Database Advanced\Examination System\Examination System\obj\Debug\Examination_System.View.Start.resources

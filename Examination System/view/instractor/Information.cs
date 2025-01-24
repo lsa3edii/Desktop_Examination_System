@@ -33,6 +33,13 @@ namespace Examination_System.view.instractor
             edit_btn.Enabled = true;
         }
 
+        private void inputTextChange()
+        {
+            if (currentPass.Text == "" || newPass.Text == "" || confirmPass.Text == "")
+                setDisabledItems();
+            else
+                setEnabledItems();
+        }
 
         ////////////////////////////////////////////////////////////
 
@@ -50,26 +57,17 @@ namespace Examination_System.view.instractor
 
         private void currentPass_TextChanged(object sender, EventArgs e)
         {
-            if (currentPass.Text == "" || newPass.Text == "" || confirmPass.Text == "")
-                setDisabledItems();
-            else
-                setEnabledItems();
+            inputTextChange();
         }
 
         private void newPass_TextChanged(object sender, EventArgs e)
         {
-            if (currentPass.Text == "" || newPass.Text == "" || confirmPass.Text == "")
-                setDisabledItems();
-            else
-                setEnabledItems();
+            inputTextChange();
         }
 
         private void confirmPass_TextChanged(object sender, EventArgs e)
         {
-            if (currentPass.Text == "" || newPass.Text == "" || confirmPass.Text == "")
-                setDisabledItems();
-            else
-                setEnabledItems();
+            inputTextChange();
         }
 
         private void edit_btn_Click(object sender, EventArgs e)

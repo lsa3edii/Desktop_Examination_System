@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using System.Security.Policy;
-using System.Windows.Forms;
 
 namespace Examination_System.controller
 {
@@ -27,8 +26,7 @@ namespace Examination_System.controller
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return null;
+                throw;
             }
             //finally
             //{

@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Examination_System
+namespace Examination_System.View
 {
     public partial class Start : Form
     {
@@ -27,6 +27,7 @@ namespace Examination_System
             {
                 timer.Enabled = false;
                 this.Visible = false;
+
                 new view.Login().Show();
             }
         }

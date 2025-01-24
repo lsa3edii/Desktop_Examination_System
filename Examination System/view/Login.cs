@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Examination_System.view
 {
@@ -18,6 +19,7 @@ namespace Examination_System.view
             InitializeComponent();
 
             setDisabledItems();
+            setDisabledBtn();
             password.UseSystemPasswordChar = true;
         }
 
@@ -25,18 +27,34 @@ namespace Examination_System.view
         {
             email.Enabled = false;
             password.Enabled = false;
-            login_btn.Enabled = false;
-            clear_btn.Enabled = false;
         }
 
         private void setEnabledItems()
         {
             email.Enabled = true;
             password.Enabled = true;
+        }
+
+        private void setDisabledBtn()
+        {
+            login_btn.Enabled = false;
+            clear_btn.Enabled = false;
+        }
+
+        private void setEnabledIBtn()
+        {
             login_btn.Enabled = true;
             clear_btn.Enabled = true;
         }
 
+
+        private void inputTextChange()
+        {
+            if (email.Text.Equals("") || password.Text.Equals(""))
+                setDisabledBtn();
+            else
+                setEnabledIBtn();
+        }
 
         ////////////////////////////////////////////////////////////
 
@@ -83,6 +101,16 @@ namespace Examination_System.view
         private void student_rbtn_CheckedChanged(object sender, EventArgs e)
         {
             setEnabledItems();
+        }
+
+        private void email_TextChanged(object sender, EventArgs e)
+        {
+            inputTextChange();
+        }
+
+        private void password_TextChanged(object sender, EventArgs e)
+        {
+            inputTextChange();
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Examination_System.controller;
+using Examination_System.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,12 +9,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Examination_System.view.admin
 {
     public partial class Information : Form
     {
-        public Information()
+        private Admin admin;
+        private IAdminRepo adminMethods;
+        private Form _Home;
+
+        public Information(string email, Form home)
         {
             InitializeComponent();
 
@@ -20,6 +27,11 @@ namespace Examination_System.view.admin
             currentPass.UseSystemPasswordChar = true;
             newPass.UseSystemPasswordChar = true;
             confirmPass.UseSystemPasswordChar = true;
+
+            admin = new Admin();
+            adminMethods = new AdminMethods();
+            emailLabel.Text = email;
+            _Home = home;
         }
 
 
@@ -31,6 +43,31 @@ namespace Examination_System.view.admin
         private void setEnabledItems()
         {
             edit_btn.Enabled = true;
+        }
+
+        private void inputTextChange()
+        {
+            if (name.Text == "" || currentPass.Text == "" || newPass.Text == "" || confirmPass.Text == "")
+                setDisabledItems();
+            else
+                setEnabledItems();
+        }
+
+        private void setData()
+        {
+            admin.Email = emailLabel.Text;
+            admin.Id = adminMethods.getID(admin.Email);
+            admin.Name = name.Text;
+            admin.Password = newPass.Text;
+        }
+
+        private bool checkData()
+        {
+            if (name.Text != string.Empty && emailLabel.Text != string.Empty && currentPass.Text != string.Empty && newPass.Text != string.Empty && confirmPass.Text != string.Empty)
+                if(newPass.Text == confirmPass.Text)
+                    return true;
+
+            return false;
         }
 
 
@@ -45,36 +82,54 @@ namespace Examination_System.view.admin
         private void back_Click(object sender, EventArgs e)
         {
             this.Close();
-            new Home().Show();
+            _Home.Visible = true;
         }
 
         private void edit_btn_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (checkData())
+            {
+                setData();
+
+                try
+                {
+                    if (adminMethods.checkPassword(currentPass.Text, admin.Email))
+                    {
+                        adminMethods.Update(admin);
+                        MessageBox.Show("Successfuly Updated !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                        MessageBox.Show("Update failed check your data !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+            }
+            else
+                MessageBox.Show("Update failed check your data !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void newPass_TextChanged(object sender, EventArgs e)
         {
-            if (currentPass.Text == "" || newPass.Text == "" || confirmPass.Text == "")
-                setDisabledItems();
-            else
-                setEnabledItems();
+            inputTextChange();
         }
 
         private void confirmPass_TextChanged(object sender, EventArgs e)
         {
-            if (currentPass.Text == "" || newPass.Text == "" || confirmPass.Text == "")
-                setDisabledItems();
-            else
-                setEnabledItems();
+            inputTextChange();
         }
 
         private void currentPass_TextChanged(object sender, EventArgs e)
         {
-            if (currentPass.Text == "" || newPass.Text == "" || confirmPass.Text == "")
-                setDisabledItems();
-            else
-                setEnabledItems();
+            inputTextChange();
+        }
+
+        private void name_TextChanged(object sender, EventArgs e)
+        {
+            inputTextChange();
         }
     }
 }

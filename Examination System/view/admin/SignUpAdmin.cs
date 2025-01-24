@@ -1,4 +1,5 @@
 ﻿using Examination_System.controller;
+using Examination_System.model;
 using Examination_System.view.admin;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,8 @@ namespace Examination_System.view
 {
     public partial class SignUpAdmin : Form
     {
-        private AdminMethods adminMethods = new AdminMethods();
+        private Admin admin;
+        private IAdminRepo adminMethods;
 
         public SignUpAdmin()
         {
@@ -23,6 +25,9 @@ namespace Examination_System.view
             setDisabledItems();
             password.UseSystemPasswordChar = true;
             confirmPassword.UseSystemPasswordChar = true;
+
+            admin = new Admin();
+            adminMethods = new AdminMethods();
         }
 
         private void setDisabledItems()
@@ -39,9 +44,9 @@ namespace Examination_System.view
 
         private void setData()
         {
-            adminMethods.admin.Name = username.Text;
-            adminMethods.admin.Email = email.Text;
-            adminMethods.admin.Password = password.Text;
+            admin.Name = username.Text;
+            admin.Email = email.Text;
+            admin.Password = password.Text;
         }
 
         private bool checkData()
@@ -52,6 +57,14 @@ namespace Examination_System.view
             return false;
         }
 
+        private void inputTextChange()
+        {
+            if (username.Text.Equals("") || email.Text.Equals("") ||
+                password.Text.Equals("") || confirmPassword.Text.Equals(""))
+                setDisabledItems();
+            else
+                setEnabledItems();
+        }
 
         ////////////////////////////////////////////////////////////
 
@@ -77,38 +90,22 @@ namespace Examination_System.view
 
         private void username_TextChanged(object sender, EventArgs e)
         {
-            if (username.Text.Equals("") || email.Text.Equals("") ||
-                password.Text.Equals("") || confirmPassword.Text.Equals(""))
-                setDisabledItems();
-            else
-                setEnabledItems();
+            inputTextChange();
         }
 
         private void email_TextChanged(object sender, EventArgs e)
         {
-            if (username.Text.Equals("") || email.Text.Equals("") ||
-                password.Text.Equals("") || confirmPassword.Text.Equals(""))
-                setDisabledItems();
-            else
-                setEnabledItems();
+            inputTextChange();
         }
 
         private void password_TextChanged(object sender, EventArgs e)
         {
-            if (username.Text.Equals("") || email.Text.Equals("") || 
-                password.Text.Equals("") || confirmPassword.Text.Equals(""))
-                setDisabledItems();
-            else
-                setEnabledItems();
+            inputTextChange();
         }
 
         private void confirmPassword_TextChanged(object sender, EventArgs e)
         {
-            if (username.Text.Equals("") || email.Text.Equals("") ||
-                password.Text.Equals("") || confirmPassword.Text.Equals(""))
-                setDisabledItems();
-            else
-                setEnabledItems();
+            inputTextChange();
         }
 
         private void createAcc_btn_Click(object sender, EventArgs e)
@@ -116,7 +113,7 @@ namespace Examination_System.view
             if (checkData())
             {
                 setData();
-                adminMethods.Insert();
+                adminMethods.Insert(admin);
 
                 MessageBox.Show("Account Successfuly Created !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

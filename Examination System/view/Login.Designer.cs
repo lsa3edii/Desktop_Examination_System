@@ -179,6 +179,7 @@
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(360, 35);
             this.email.TabIndex = 6;
+            this.email.TextChanged += new System.EventHandler(this.email_TextChanged);
             // 
             // password
             // 
@@ -188,6 +189,7 @@
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(360, 35);
             this.password.TabIndex = 8;
+            this.password.TextChanged += new System.EventHandler(this.password_TextChanged);
             // 
             // label4
             // 

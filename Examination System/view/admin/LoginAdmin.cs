@@ -32,6 +32,13 @@ namespace Examination_System.view.admin
             clear_btn.Enabled = true;
         }
 
+        private void inputTextChange()
+        {
+            if (email.Text.Equals("") || password.Text.Equals(""))
+                setDisabledItems();
+            else
+                setEnabledItems();
+        }
 
         ////////////////////////////////////////////////////////////
 
@@ -59,8 +66,8 @@ namespace Examination_System.view.admin
             {
                 MessageBox.Show("Successfuly Login !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                new admin.Home(email.Text).Show();
                 this.Close();
-                new admin.Home().Show();
             }
         }
 
@@ -72,18 +79,12 @@ namespace Examination_System.view.admin
 
         private void email_TextChanged(object sender, EventArgs e)
         {
-            if(email.Text.Equals("") || password.Text.Equals(""))
-                setDisabledItems();
-            else
-                setEnabledItems();
+            inputTextChange();
         }
 
         private void password_TextChanged(object sender, EventArgs e)
         {
-            if (email.Text.Equals("") || password.Text.Equals(""))
-                setDisabledItems();
-            else
-                setEnabledItems();
+            inputTextChange();
         }
     }
 }

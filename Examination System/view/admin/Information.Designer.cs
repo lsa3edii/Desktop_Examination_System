@@ -36,7 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.email = new System.Windows.Forms.Label();
+            this.emailLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.newPass = new System.Windows.Forms.TextBox();
             this.confirmPass = new System.Windows.Forms.TextBox();
@@ -131,16 +131,16 @@
             this.label3.TabIndex = 15;
             this.label3.Text = "Email →";
             // 
-            // email
+            // emailLabel
             // 
-            this.email.AutoSize = true;
-            this.email.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.email.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(0)))), ((int)(((byte)(21)))));
-            this.email.Location = new System.Drawing.Point(166, 342);
-            this.email.Name = "email";
-            this.email.Size = new System.Drawing.Size(97, 33);
-            this.email.TabIndex = 16;
-            this.email.Text = "email";
+            this.emailLabel.AutoSize = true;
+            this.emailLabel.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.emailLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(0)))), ((int)(((byte)(21)))));
+            this.emailLabel.Location = new System.Drawing.Point(166, 342);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(97, 33);
+            this.emailLabel.TabIndex = 16;
+            this.emailLabel.Text = "email";
             // 
             // label4
             // 
@@ -228,6 +228,7 @@
             this.name.Name = "name";
             this.name.Size = new System.Drawing.Size(367, 35);
             this.name.TabIndex = 27;
+            this.name.TextChanged += new System.EventHandler(this.name_TextChanged);
             // 
             // label5
             // 
@@ -255,7 +256,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.newPass);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.email);
+            this.Controls.Add(this.emailLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
@@ -281,7 +282,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label email;
+        private System.Windows.Forms.Label emailLabel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox newPass;
         private System.Windows.Forms.TextBox confirmPass;

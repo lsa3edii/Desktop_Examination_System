@@ -1,4 +1,4 @@
-﻿namespace Examination_System
+﻿namespace Examination_System.View
 {
     partial class Start
     {
@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Start));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.circularBar = new CircularProgressBar.CircularProgressBar();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -46,7 +46,7 @@
             this.panel1.Location = new System.Drawing.Point(-11, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(795, 72);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 59;
             // 
             // label1
             // 
@@ -58,16 +58,6 @@
             this.label1.Size = new System.Drawing.Size(366, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Examination System";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(343, 78);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(66, 71);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // circularBar
             // 
@@ -97,9 +87,19 @@
             this.circularBar.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
             this.circularBar.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
             this.circularBar.SuperscriptText = "";
-            this.circularBar.TabIndex = 58;
+            this.circularBar.TabIndex = 61;
             this.circularBar.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
             this.circularBar.Value = 68;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(343, 78);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(66, 71);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 60;
+            this.pictureBox1.TabStop = false;
             // 
             // timer
             // 
@@ -113,10 +113,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(782, 416);
-            this.ControlBox = false;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.circularBar);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Start";
@@ -134,9 +134,8 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private CircularProgressBar.CircularProgressBar circularBar;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer;
     }
 }
-
