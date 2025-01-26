@@ -149,6 +149,7 @@
             // 
             this.students_table.AllowUserToAddRows = false;
             this.students_table.AllowUserToDeleteRows = false;
+            this.students_table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.students_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.students_table.Location = new System.Drawing.Point(530, 160);
             this.students_table.Name = "students_table";

@@ -16,27 +16,55 @@ namespace Examination_System.controller
 
         public void Insert(Admin admin) 
         {
-            string columns = "name, email, password";
+            string columns = "admin_name, admin_email, admin_password";
             string values = $"'{admin.Name}', '{admin.Email}', '{admin.Password}'";
-            ExecuteDmlQuery("Admin", "insert", columns, values);
+            ExecuteDmlQuery("Admin", "insert", columns, values,null,0);
         }
 
 
         public void Update(Admin admin)
         {
-            string columns = $"name = '{admin.Name}', password = '{admin.Password}'";
+            string columns = $"admin_name = '{admin.Name}', admin_password = '{admin.Password}'";
             string condition = $"id = {admin.Id}";
             ExecuteDmlQuery("Admin", "update", columns, null, condition);
         }
 
 
-        //public bool login()
-        //{
+        public bool Login(Admin admin)
+        {
+            //string columns = $"admin_email = '{admin.Email}' , password = '{admin.Password}'";
+            //string condition = $"id = {admin.Id}";
+            
+            using (SqlConnection connection = controller.DatabaseConnection.GetConnection())
+            {
+                if (connection == null)
+                    throw new Exception("Database connection failed.");
 
-        //}
+                try
+                {
+                    using (SqlCommand command = new SqlCommand("login_check", connection))
+                    {
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        command.Parameters.AddWithValue("@table", "Admin");
+                        command.Parameters.AddWithValue("@email", admin.Email);
+                        command.Parameters.AddWithValue("@password", admin.Password);
+                        
+                        int count = Convert.ToInt32(command.ExecuteScalar());
+
+                        return count > 0;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("An error occurred: " + ex.Message, ex);
+                }
+            }
+            
+        }
 
 
-        public int getID(string email)
+        public int getID(string table, string email)
         {
             using (SqlConnection connection = controller.DatabaseConnection.GetConnection())
             {
@@ -45,9 +73,10 @@ namespace Examination_System.controller
 
                 try
                 {
-                    using (SqlCommand command = new SqlCommand("getID", connection))
+                    using (SqlCommand command = new SqlCommand("get_id", connection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@table", table);
                         command.Parameters.AddWithValue("@Email", email);
 
                         var result = command.ExecuteScalar();
@@ -66,7 +95,7 @@ namespace Examination_System.controller
         }
 
 
-        public bool checkPassword(string password, string email)
+        public bool checkPassword(string password, string table, string email)
         {
             using (SqlConnection connection = controller.DatabaseConnection.GetConnection())
             {
@@ -75,10 +104,11 @@ namespace Examination_System.controller
 
                 try
                 {
-                    using (SqlCommand command = new SqlCommand("getPassword", connection))
+                    using (SqlCommand command = new SqlCommand("get_password", connection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.AddWithValue("@Email", email);
+                        command.Parameters.AddWithValue("@table", table);
+                        command.Parameters.AddWithValue("@email", email);
 
                         var result = command.ExecuteScalar();
 
@@ -96,7 +126,7 @@ namespace Examination_System.controller
         }
 
 
-        private void ExecuteDmlQuery(string tableName, string operation, string columns = null, string values = null, string condition = null)
+        private void ExecuteDmlQuery(string tableName, string operation, string columns = null, string values = null, string condition = null ,int level = 0)
         {
             using (SqlConnection connection = controller.DatabaseConnection.GetConnection())
             {
@@ -105,7 +135,7 @@ namespace Examination_System.controller
 
                 try
                 {
-                    using (SqlCommand command = new SqlCommand("dmlQueries", connection))
+                    using (SqlCommand command = new SqlCommand("dmlQuerries", connection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
 
@@ -114,6 +144,8 @@ namespace Examination_System.controller
                         command.Parameters.AddWithValue("@columns", (object)columns ?? DBNull.Value);
                         command.Parameters.AddWithValue("@values", (object)values ?? DBNull.Value);
                         command.Parameters.AddWithValue("@condition", (object)condition ?? DBNull.Value);
+                        command.Parameters.AddWithValue("@nestlevel", (object)level ?? DBNull.Value);
+
 
                         command.ExecuteNonQuery();
                     }

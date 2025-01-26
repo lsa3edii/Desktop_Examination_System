@@ -1,4 +1,9 @@
-﻿using System;
+﻿using Examination_System.controller;
+using Examination_System.Controller.InstructorController;
+using Examination_System.Controller.StudentController;
+using Examination_System.model;
+using Examination_System.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +19,11 @@ namespace Examination_System.view
 {
     public partial class Login : Form
     {
+        private Student student;
+        private IStudentRepo studentMethods;
+
+        private Instructor instructor;
+        private IInstructorRepo instrcutorMethods;
         public Login()
         {
             InitializeComponent();
@@ -21,6 +31,11 @@ namespace Examination_System.view
             setDisabledItems();
             setDisabledBtn();
             password.UseSystemPasswordChar = true;
+            studentMethods = new StudentMethods();
+            student = new Student();
+
+            instructor = new Instructor();
+            instrcutorMethods = new InstructorMethods();
         }
 
         private void setDisabledItems()
@@ -68,29 +83,61 @@ namespace Examination_System.view
         {
             new Prompt(this).Show();
         }
-
+        
+       
+        private void setStudentData()
+        {
+            //admin.Id = adminMethods.getID(admin.Email); 
+            student.Email = email.Text;
+            student.Password = password.Text;
+        }
+        
         private void login_btn_Click(object sender, EventArgs e)
         {
             if(instractor_rbtn.Checked)
             {
-                MessageBox.Show("Successfuly Login !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
-                this.Close();
-                new instractor.Home().Show();
+                setInstructorData();
+                if(instrcutorMethods.Login(instructor))
+                {
+                    MessageBox.Show("Successfuly Login !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                    new instractor.Home(instructor.Email).Show();
+
+                }
+                else
+                    MessageBox.Show("Invalid Login !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+
             }
             else if (student_rbtn.Checked)
             {
-                MessageBox.Show("Successfuly Login !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                
-                this.Close();
-                new student.Home().Show();
+                setStudentData();
+                if(studentMethods.Login(student))
+                {
+                    MessageBox.Show("Successfuly Login !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+
+                    new student.Home(student.Email).Show();
+                }
+                else
+                    MessageBox.Show("Invalid Login !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
+            else
+                MessageBox.Show("Choose Role To Login !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void setInstructorData()
+        {
+            instructor.Email = email.Text;
+            instructor.Password = password.Text;
         }
 
         private void clear_btn_Click(object sender, EventArgs e)
         {
             email.Text = "";
-            password.Text = "";
+           password.Text = "";
         }
 
         private void instractor_rbtn_CheckedChanged(object sender, EventArgs e)
@@ -105,7 +152,7 @@ namespace Examination_System.view
 
         private void email_TextChanged(object sender, EventArgs e)
         {
-            inputTextChange();
+             inputTextChange();
         }
 
         private void password_TextChanged(object sender, EventArgs e)

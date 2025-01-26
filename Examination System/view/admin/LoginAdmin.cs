@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Examination_System.controller;
+using Examination_System.model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,17 +9,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Examination_System.view.admin
 {
     public partial class LoginAdmin : Form
     {
+        private Admin admin;
+        private IAdminRepo adminMethods;
         public LoginAdmin()
         {
             InitializeComponent();
 
             setDisabledItems();
             password.UseSystemPasswordChar = true;
+            admin = new Admin();
+            adminMethods = new AdminMethods();
         }
 
         private void setDisabledItems()
@@ -39,6 +46,7 @@ namespace Examination_System.view.admin
             else
                 setEnabledItems();
         }
+
 
         ////////////////////////////////////////////////////////////
 
@@ -62,15 +70,40 @@ namespace Examination_System.view.admin
 
         private void login_btn_Click(object sender, EventArgs e)
         {
-            if (true) ///
-            {
-                MessageBox.Show("Successfuly Login !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            setData();
 
-                new admin.Home(email.Text).Show();
-                this.Close();
+            try
+            {
+                if (adminMethods.Login(admin))
+                {
+                    MessageBox.Show("Successfuly Login !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    new admin.Home(email.Text).Show();
+                    this.Close();
+                }
+
+                else
+                    MessageBox.Show("Faild to Login!!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            //if (true) ///
+            //{
+            //    MessageBox.Show("Successfuly Login !!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            //    new admin.Home(email.Text).Show();
+            //    this.Close();
+            //}
         }
 
+        private void setData()
+        {
+            //admin.Id = adminMethods.getID(admin.Email); 
+            admin.Email = email.Text;
+            admin.Password = password.Text;
+        }
         private void clear_btn_Click(object sender, EventArgs e)
         {
             email.Text = "";

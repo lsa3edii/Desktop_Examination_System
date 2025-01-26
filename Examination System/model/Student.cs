@@ -11,15 +11,41 @@ namespace Examination_System.Model
 
     internal class Student : User
     {
+
+
+
+        private string fname;
+        private string lname;
         private string phone;
         private string address;
         private Gender gender;
-        private DateTime birthDate;
+        private string birthDate;
         private int trackId;
         private int adminId;
+        private int ssn;
 
-        public Student( ) { } 
+    
 
+
+
+        public Student( ) { }
+
+        public int SSN
+        {
+            get { return ssn; }
+            set { ssn = value; }
+        }
+        public string FName
+        {
+            get { return fname; }
+            set { fname = value; }
+        }
+
+        public string LName
+        {
+            get { return lname; }
+            set { lname = value; }
+        }
         public string Phone
         {
             get { return phone; }
@@ -38,7 +64,7 @@ namespace Examination_System.Model
             set { gender = value; }
         }
 
-        public DateTime BirthDate
+        public string BirthDate
         {
             get { return birthDate; }
             set { birthDate = value; }

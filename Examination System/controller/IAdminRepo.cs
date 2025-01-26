@@ -11,8 +11,8 @@ namespace Examination_System.controller
     {
         void Insert(Admin admin);
         void Update(Admin admin);
-        //bool Login();
-        int getID(string email);
-        bool checkPassword(string password, string email);
+        bool Login(Admin admin);
+        int getID(string table, string email);
+        bool checkPassword(string password, string table, string email);
     }
 }

@@ -201,6 +201,7 @@
             // 
             this.instractors_table.AllowUserToAddRows = false;
             this.instractors_table.AllowUserToDeleteRows = false;
+            this.instractors_table.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.instractors_table.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.instractors_table.Location = new System.Drawing.Point(530, 158);
             this.instractors_table.Name = "instractors_table";
