@@ -20,6 +20,8 @@ D:\Desktop-Examination_System\Examination System\obj\Debug\Examination_System.vi
 D:\Desktop-Examination_System\Examination System\obj\Debug\Examination_System.view.admin.ManageInstractors.resources
 D:\Desktop-Examination_System\Examination System\obj\Debug\Examination_System.view.admin.ManageStudents.resources
 D:\Desktop-Examination_System\Examination System\obj\Debug\Examination_System.view.SignUpAdmin.resources
+D:\Desktop-Examination_System\Examination System\obj\Debug\Examination_System.view.instractor.Courses.resources
+D:\Desktop-Examination_System\Examination System\obj\Debug\Examination_System.View.instractor.ExamStatus.resources
 D:\Desktop-Examination_System\Examination System\obj\Debug\Examination_System.view.instractor.Home.resources
 D:\Desktop-Examination_System\Examination System\obj\Debug\Examination_System.view.instractor.Information.resources
 D:\Desktop-Examination_System\Examination System\obj\Debug\Examination_System.view.instractor.MakeExam.resources
@@ -27,6 +29,8 @@ D:\Desktop-Examination_System\Examination System\obj\Debug\Examination_System.vi
 D:\Desktop-Examination_System\Examination System\obj\Debug\Examination_System.view.Login.resources
 D:\Desktop-Examination_System\Examination System\obj\Debug\Examination_System.view.Prompt.resources
 D:\Desktop-Examination_System\Examination System\obj\Debug\Examination_System.View.Start.resources
+D:\Desktop-Examination_System\Examination System\obj\Debug\Examination_System.View.student.ChoseExam.resources
+D:\Desktop-Examination_System\Examination System\obj\Debug\Examination_System.View.student.Courses.resources
 D:\Desktop-Examination_System\Examination System\obj\Debug\Examination_System.view.student.Home.resources
 D:\Desktop-Examination_System\Examination System\obj\Debug\Examination_System.view.student.Information.resources
 D:\Desktop-Examination_System\Examination System\obj\Debug\Examination_System.view.student.ShowResult.resources
@@ -36,7 +40,3 @@ D:\Desktop-Examination_System\Examination System\obj\Debug\Examination_System.cs
 D:\Desktop-Examination_System\Examination System\obj\Debug\Examinat.42BE0C5D.Up2Date
 D:\Desktop-Examination_System\Examination System\obj\Debug\Examination System.exe
 D:\Desktop-Examination_System\Examination System\obj\Debug\Examination System.pdb
-D:\Desktop-Examination_System\Examination System\obj\Debug\Examination_System.view.instractor.Courses.resources
-D:\Desktop-Examination_System\Examination System\obj\Debug\Examination_System.View.student.Courses.resources
-D:\Desktop-Examination_System\Examination System\obj\Debug\Examination_System.View.instractor.ExamStatus.resources
-D:\Desktop-Examination_System\Examination System\obj\Debug\Examination_System.View.student.ChoseExam.resources
