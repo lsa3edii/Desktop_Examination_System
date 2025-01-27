@@ -22,6 +22,7 @@ namespace Examination_System.view.student
 
         private IExamRepo examMethods;
         private IStudentRepo studentMethods;
+        private Student_Exam_Questions studentAnswer;
         private int studentSSN;
         private int examID;
 
@@ -41,6 +42,7 @@ namespace Examination_System.view.student
 
             examMethods = new ExamMethods();
             studentMethods = new StudentMethods();
+            studentAnswer = new Student_Exam_Questions();
             
             studentSSN = studentMethods.getSSN("student", _email);
             examID = examMethods.GetExamID("exam", crs_name);
@@ -183,6 +185,13 @@ namespace Examination_System.view.student
             //}
         }
 
+        private void setStudentAnswer(int questionID, string answer)
+        {
+            studentAnswer.StudentId = studentSSN;
+            studentAnswer.ExamId = examID;
+            studentAnswer.QuestionId = questionID; //
+            studentAnswer.Answer = answer;
+        }
 
         ////////////////////////////////////////////////////////////
 
@@ -204,6 +213,8 @@ namespace Examination_System.view.student
 
             if (confirmation == DialogResult.Yes)
             {
+                //setStudentAnswer();
+                examMethods.SaveStudentAnswers(studentAnswer);
                 examMethods.CorrectExam(studentSSN, examID);
 
                 this.Close();
@@ -225,6 +236,8 @@ namespace Examination_System.view.student
             }
             else
             {
+                //setStudentAnswer();
+                examMethods.SaveStudentAnswers(studentAnswer);
                 examMethods.CorrectExam(studentSSN, examID);
 
                 this.Close();
@@ -233,6 +246,206 @@ namespace Examination_System.view.student
                 MessageBox.Show("The Exam is Over", "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
+        }
+
+        private void q1_c1_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q1_c2_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q1_c3_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q1_c4_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q2_c1_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q2_c2_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q2_c3_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q2_c4_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q3_c1_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q3_c2_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q3_c3_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q3_c4_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q4_c1_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q4_c2_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q4_c3_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q4_c4_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q5_c1_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q5_c2_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q5_c3_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q5_c4_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q6_c1_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q6_c2_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q6_c3_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q6_c4_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q7_c1_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q7_c2_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q7_c3_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q7_c4_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q8_c1_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q8_c2_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q8_c3_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q8_c4_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q9_c1_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q9_c2_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q9_c3_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q9_c4_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q10_c1_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q10_c2_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q10_c3_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
+        }
+
+        private void q10_c4_rbtn_CheckedChanged(object sender, EventArgs e)
+        {
+            //setStudentAnswer();
         }
     }
 }

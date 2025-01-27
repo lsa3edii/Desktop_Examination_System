@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Examination_System.model;
 
 namespace Examination_System.Controller
 {
@@ -105,5 +106,26 @@ namespace Examination_System.Controller
             }
         }
 
+        public void SaveStudentAnswers(Student_Exam_Questions studentAnswer)
+        {
+            string columns = "SSN_FK, exam_id_FK, ques_id_FK, answer";
+            string values = $"'{studentAnswer.StudentId}', '{studentAnswer.ExamId}', '{studentAnswer.QuestionId}', '{studentAnswer.Answer}'";
+            HelperMethods.ExecuteDmlQuery("Student_Take_Exam_Has_Questions", "insert", columns, values, null, 0);
+        }
+
+        public void InsertQuestion(Questions question)
+        {
+
+        }
+
+        public void UpdateQuestion(Questions question)
+        {
+
+        }
+
+        public bool LoginQuestion(Questions question)
+        {
+            return false;
+        }
     }
 }

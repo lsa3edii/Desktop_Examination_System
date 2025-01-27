@@ -388,6 +388,7 @@
             this.q1_c4_rbtn.TabStop = true;
             this.q1_c4_rbtn.Text = "choise 4";
             this.q1_c4_rbtn.UseVisualStyleBackColor = true;
+            this.q1_c4_rbtn.CheckedChanged += new System.EventHandler(this.q1_c4_rbtn_CheckedChanged);
             // 
             // q1label3
             // 
@@ -413,6 +414,7 @@
             this.q1_c3_rbtn.TabStop = true;
             this.q1_c3_rbtn.Text = "choise 3";
             this.q1_c3_rbtn.UseVisualStyleBackColor = true;
+            this.q1_c3_rbtn.CheckedChanged += new System.EventHandler(this.q1_c3_rbtn_CheckedChanged);
             // 
             // q1label2
             // 
@@ -438,6 +440,7 @@
             this.q1_c2_rbtn.TabStop = true;
             this.q1_c2_rbtn.Text = "choise 2";
             this.q1_c2_rbtn.UseVisualStyleBackColor = true;
+            this.q1_c2_rbtn.CheckedChanged += new System.EventHandler(this.q1_c2_rbtn_CheckedChanged);
             // 
             // q1label1
             // 
@@ -463,6 +466,7 @@
             this.q1_c1_rbtn.TabStop = true;
             this.q1_c1_rbtn.Text = "choise 1";
             this.q1_c1_rbtn.UseVisualStyleBackColor = true;
+            this.q1_c1_rbtn.CheckedChanged += new System.EventHandler(this.q1_c1_rbtn_CheckedChanged);
             // 
             // label9
             // 
@@ -525,6 +529,7 @@
             this.q2_c4_rbtn.TabStop = true;
             this.q2_c4_rbtn.Text = "choise 4";
             this.q2_c4_rbtn.UseVisualStyleBackColor = true;
+            this.q2_c4_rbtn.CheckedChanged += new System.EventHandler(this.q2_c4_rbtn_CheckedChanged);
             // 
             // q2label3
             // 
@@ -550,6 +555,7 @@
             this.q2_c3_rbtn.TabStop = true;
             this.q2_c3_rbtn.Text = "choise 3";
             this.q2_c3_rbtn.UseVisualStyleBackColor = true;
+            this.q2_c3_rbtn.CheckedChanged += new System.EventHandler(this.q2_c3_rbtn_CheckedChanged);
             // 
             // q2label2
             // 
@@ -575,6 +581,7 @@
             this.q2_c2_rbtn.TabStop = true;
             this.q2_c2_rbtn.Text = "choise 2";
             this.q2_c2_rbtn.UseVisualStyleBackColor = true;
+            this.q2_c2_rbtn.CheckedChanged += new System.EventHandler(this.q2_c2_rbtn_CheckedChanged);
             // 
             // q2label1
             // 
@@ -600,6 +607,7 @@
             this.q2_c1_rbtn.TabStop = true;
             this.q2_c1_rbtn.Text = "choise 1";
             this.q2_c1_rbtn.UseVisualStyleBackColor = true;
+            this.q2_c1_rbtn.CheckedChanged += new System.EventHandler(this.q2_c1_rbtn_CheckedChanged);
             // 
             // label16
             // 
@@ -662,6 +670,7 @@
             this.q3_c4_rbtn.TabStop = true;
             this.q3_c4_rbtn.Text = "choise 4";
             this.q3_c4_rbtn.UseVisualStyleBackColor = true;
+            this.q3_c4_rbtn.CheckedChanged += new System.EventHandler(this.q3_c4_rbtn_CheckedChanged);
             // 
             // q3label3
             // 
@@ -687,6 +696,7 @@
             this.q3_c3_rbtn.TabStop = true;
             this.q3_c3_rbtn.Text = "choise 3";
             this.q3_c3_rbtn.UseVisualStyleBackColor = true;
+            this.q3_c3_rbtn.CheckedChanged += new System.EventHandler(this.q3_c3_rbtn_CheckedChanged);
             // 
             // q3label2
             // 
@@ -712,6 +722,7 @@
             this.q3_c2_rbtn.TabStop = true;
             this.q3_c2_rbtn.Text = "choise 2";
             this.q3_c2_rbtn.UseVisualStyleBackColor = true;
+            this.q3_c2_rbtn.CheckedChanged += new System.EventHandler(this.q3_c2_rbtn_CheckedChanged);
             // 
             // q3label1
             // 
@@ -737,6 +748,7 @@
             this.q3_c1_rbtn.TabStop = true;
             this.q3_c1_rbtn.Text = "choise 1";
             this.q3_c1_rbtn.UseVisualStyleBackColor = true;
+            this.q3_c1_rbtn.CheckedChanged += new System.EventHandler(this.q3_c1_rbtn_CheckedChanged);
             // 
             // label22
             // 
@@ -799,6 +811,7 @@
             this.q4_c4_rbtn.TabStop = true;
             this.q4_c4_rbtn.Text = "choise 4";
             this.q4_c4_rbtn.UseVisualStyleBackColor = true;
+            this.q4_c4_rbtn.CheckedChanged += new System.EventHandler(this.q4_c4_rbtn_CheckedChanged);
             // 
             // q4label3
             // 
@@ -824,6 +837,7 @@
             this.q4_c3_rbtn.TabStop = true;
             this.q4_c3_rbtn.Text = "choise 3";
             this.q4_c3_rbtn.UseVisualStyleBackColor = true;
+            this.q4_c3_rbtn.CheckedChanged += new System.EventHandler(this.q4_c3_rbtn_CheckedChanged);
             // 
             // q4label2
             // 
@@ -849,6 +863,7 @@
             this.q4_c2_rbtn.TabStop = true;
             this.q4_c2_rbtn.Text = "choise 2";
             this.q4_c2_rbtn.UseVisualStyleBackColor = true;
+            this.q4_c2_rbtn.CheckedChanged += new System.EventHandler(this.q4_c2_rbtn_CheckedChanged);
             // 
             // q4label1
             // 
@@ -874,6 +889,7 @@
             this.q4_c1_rbtn.TabStop = true;
             this.q4_c1_rbtn.Text = "choise 1";
             this.q4_c1_rbtn.UseVisualStyleBackColor = true;
+            this.q4_c1_rbtn.CheckedChanged += new System.EventHandler(this.q4_c1_rbtn_CheckedChanged);
             // 
             // label28
             // 
@@ -936,6 +952,7 @@
             this.q5_c4_rbtn.TabStop = true;
             this.q5_c4_rbtn.Text = "choise 4";
             this.q5_c4_rbtn.UseVisualStyleBackColor = true;
+            this.q5_c4_rbtn.CheckedChanged += new System.EventHandler(this.q5_c4_rbtn_CheckedChanged);
             // 
             // q5label3
             // 
@@ -961,6 +978,7 @@
             this.q5_c3_rbtn.TabStop = true;
             this.q5_c3_rbtn.Text = "choise 3";
             this.q5_c3_rbtn.UseVisualStyleBackColor = true;
+            this.q5_c3_rbtn.CheckedChanged += new System.EventHandler(this.q5_c3_rbtn_CheckedChanged);
             // 
             // q5label2
             // 
@@ -986,6 +1004,7 @@
             this.q5_c2_rbtn.TabStop = true;
             this.q5_c2_rbtn.Text = "choise 2";
             this.q5_c2_rbtn.UseVisualStyleBackColor = true;
+            this.q5_c2_rbtn.CheckedChanged += new System.EventHandler(this.q5_c2_rbtn_CheckedChanged);
             // 
             // q5label1
             // 
@@ -1011,6 +1030,7 @@
             this.q5_c1_rbtn.TabStop = true;
             this.q5_c1_rbtn.Text = "choise 1";
             this.q5_c1_rbtn.UseVisualStyleBackColor = true;
+            this.q5_c1_rbtn.CheckedChanged += new System.EventHandler(this.q5_c1_rbtn_CheckedChanged);
             // 
             // label34
             // 
@@ -1073,6 +1093,7 @@
             this.q6_c4_rbtn.TabStop = true;
             this.q6_c4_rbtn.Text = "choise 4";
             this.q6_c4_rbtn.UseVisualStyleBackColor = true;
+            this.q6_c4_rbtn.CheckedChanged += new System.EventHandler(this.q6_c4_rbtn_CheckedChanged);
             // 
             // q6label3
             // 
@@ -1098,6 +1119,7 @@
             this.q6_c3_rbtn.TabStop = true;
             this.q6_c3_rbtn.Text = "choise 3";
             this.q6_c3_rbtn.UseVisualStyleBackColor = true;
+            this.q6_c3_rbtn.CheckedChanged += new System.EventHandler(this.q6_c3_rbtn_CheckedChanged);
             // 
             // q6label2
             // 
@@ -1123,6 +1145,7 @@
             this.q6_c2_rbtn.TabStop = true;
             this.q6_c2_rbtn.Text = "choise 2";
             this.q6_c2_rbtn.UseVisualStyleBackColor = true;
+            this.q6_c2_rbtn.CheckedChanged += new System.EventHandler(this.q6_c2_rbtn_CheckedChanged);
             // 
             // q6label1
             // 
@@ -1148,6 +1171,7 @@
             this.q6_c1_rbtn.TabStop = true;
             this.q6_c1_rbtn.Text = "choise 1";
             this.q6_c1_rbtn.UseVisualStyleBackColor = true;
+            this.q6_c1_rbtn.CheckedChanged += new System.EventHandler(this.q6_c1_rbtn_CheckedChanged);
             // 
             // label40
             // 
@@ -1210,6 +1234,7 @@
             this.q7_c4_rbtn.TabStop = true;
             this.q7_c4_rbtn.Text = "choise 4";
             this.q7_c4_rbtn.UseVisualStyleBackColor = true;
+            this.q7_c4_rbtn.CheckedChanged += new System.EventHandler(this.q7_c4_rbtn_CheckedChanged);
             // 
             // q7label3
             // 
@@ -1235,6 +1260,7 @@
             this.q7_c3_rbtn.TabStop = true;
             this.q7_c3_rbtn.Text = "choise 3";
             this.q7_c3_rbtn.UseVisualStyleBackColor = true;
+            this.q7_c3_rbtn.CheckedChanged += new System.EventHandler(this.q7_c3_rbtn_CheckedChanged);
             // 
             // q7label2
             // 
@@ -1260,6 +1286,7 @@
             this.q7_c2_rbtn.TabStop = true;
             this.q7_c2_rbtn.Text = "choise 2";
             this.q7_c2_rbtn.UseVisualStyleBackColor = true;
+            this.q7_c2_rbtn.CheckedChanged += new System.EventHandler(this.q7_c2_rbtn_CheckedChanged);
             // 
             // q7label1
             // 
@@ -1285,6 +1312,7 @@
             this.q7_c1_rbtn.TabStop = true;
             this.q7_c1_rbtn.Text = "choise 1";
             this.q7_c1_rbtn.UseVisualStyleBackColor = true;
+            this.q7_c1_rbtn.CheckedChanged += new System.EventHandler(this.q7_c1_rbtn_CheckedChanged);
             // 
             // label46
             // 
@@ -1347,6 +1375,7 @@
             this.q8_c4_rbtn.TabStop = true;
             this.q8_c4_rbtn.Text = "choise 4";
             this.q8_c4_rbtn.UseVisualStyleBackColor = true;
+            this.q8_c4_rbtn.CheckedChanged += new System.EventHandler(this.q8_c4_rbtn_CheckedChanged);
             // 
             // q8label3
             // 
@@ -1372,6 +1401,7 @@
             this.q8_c3_rbtn.TabStop = true;
             this.q8_c3_rbtn.Text = "choise 3";
             this.q8_c3_rbtn.UseVisualStyleBackColor = true;
+            this.q8_c3_rbtn.CheckedChanged += new System.EventHandler(this.q8_c3_rbtn_CheckedChanged);
             // 
             // q8label2
             // 
@@ -1397,6 +1427,7 @@
             this.q8_c2_rbtn.TabStop = true;
             this.q8_c2_rbtn.Text = "choise 2";
             this.q8_c2_rbtn.UseVisualStyleBackColor = true;
+            this.q8_c2_rbtn.CheckedChanged += new System.EventHandler(this.q8_c2_rbtn_CheckedChanged);
             // 
             // q8label1
             // 
@@ -1422,6 +1453,7 @@
             this.q8_c1_rbtn.TabStop = true;
             this.q8_c1_rbtn.Text = "choise 1";
             this.q8_c1_rbtn.UseVisualStyleBackColor = true;
+            this.q8_c1_rbtn.CheckedChanged += new System.EventHandler(this.q8_c1_rbtn_CheckedChanged);
             // 
             // label52
             // 
@@ -1484,6 +1516,7 @@
             this.q9_c4_rbtn.TabStop = true;
             this.q9_c4_rbtn.Text = "choise 4";
             this.q9_c4_rbtn.UseVisualStyleBackColor = true;
+            this.q9_c4_rbtn.CheckedChanged += new System.EventHandler(this.q9_c4_rbtn_CheckedChanged);
             // 
             // q9label3
             // 
@@ -1509,6 +1542,7 @@
             this.q9_c3_rbtn.TabStop = true;
             this.q9_c3_rbtn.Text = "choise 3";
             this.q9_c3_rbtn.UseVisualStyleBackColor = true;
+            this.q9_c3_rbtn.CheckedChanged += new System.EventHandler(this.q9_c3_rbtn_CheckedChanged);
             // 
             // q9label2
             // 
@@ -1534,6 +1568,7 @@
             this.q9_c2_rbtn.TabStop = true;
             this.q9_c2_rbtn.Text = "choise 2";
             this.q9_c2_rbtn.UseVisualStyleBackColor = true;
+            this.q9_c2_rbtn.CheckedChanged += new System.EventHandler(this.q9_c2_rbtn_CheckedChanged);
             // 
             // q9label1
             // 
@@ -1559,6 +1594,7 @@
             this.q9_c1_rbtn.TabStop = true;
             this.q9_c1_rbtn.Text = "choise 1";
             this.q9_c1_rbtn.UseVisualStyleBackColor = true;
+            this.q9_c1_rbtn.CheckedChanged += new System.EventHandler(this.q9_c1_rbtn_CheckedChanged);
             // 
             // label58
             // 
@@ -1621,6 +1657,7 @@
             this.q10_c4_rbtn.TabStop = true;
             this.q10_c4_rbtn.Text = "choise 4";
             this.q10_c4_rbtn.UseVisualStyleBackColor = true;
+            this.q10_c4_rbtn.CheckedChanged += new System.EventHandler(this.q10_c4_rbtn_CheckedChanged);
             // 
             // q10label3
             // 
@@ -1646,6 +1683,7 @@
             this.q10_c3_rbtn.TabStop = true;
             this.q10_c3_rbtn.Text = "choise 3";
             this.q10_c3_rbtn.UseVisualStyleBackColor = true;
+            this.q10_c3_rbtn.CheckedChanged += new System.EventHandler(this.q10_c3_rbtn_CheckedChanged);
             // 
             // q10label2
             // 
@@ -1671,6 +1709,7 @@
             this.q10_c2_rbtn.TabStop = true;
             this.q10_c2_rbtn.Text = "choise 2";
             this.q10_c2_rbtn.UseVisualStyleBackColor = true;
+            this.q10_c2_rbtn.CheckedChanged += new System.EventHandler(this.q10_c2_rbtn_CheckedChanged);
             // 
             // q10label1
             // 
@@ -1696,6 +1735,7 @@
             this.q10_c1_rbtn.TabStop = true;
             this.q10_c1_rbtn.Text = "choise 1";
             this.q10_c1_rbtn.UseVisualStyleBackColor = true;
+            this.q10_c1_rbtn.CheckedChanged += new System.EventHandler(this.q10_c1_rbtn_CheckedChanged);
             // 
             // timer
             // 

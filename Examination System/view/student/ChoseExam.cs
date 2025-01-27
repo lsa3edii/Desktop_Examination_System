@@ -56,7 +56,7 @@ namespace Examination_System.View.student
             }
             catch (Exception ex)
             {
-                //
+                MessageBox.Show(ex.Message, "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

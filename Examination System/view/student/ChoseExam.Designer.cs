@@ -94,7 +94,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Schoolbook", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(220, 11);
+            this.label1.Location = new System.Drawing.Point(210, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(366, 39);
             this.label1.TabIndex = 0;
@@ -105,7 +105,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Schoolbook", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(0)))), ((int)(((byte)(21)))));
-            this.label3.Location = new System.Drawing.Point(319, 121);
+            this.label3.Location = new System.Drawing.Point(322, 121);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(127, 33);
             this.label3.TabIndex = 77;
@@ -118,9 +118,9 @@
             this.course_box.Font = new System.Drawing.Font("Century Schoolbook", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.course_box.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(0)))), ((int)(((byte)(21)))));
             this.course_box.FormattingEnabled = true;
-            this.course_box.Location = new System.Drawing.Point(256, 160);
+            this.course_box.Location = new System.Drawing.Point(212, 163);
             this.course_box.Name = "course_box";
-            this.course_box.Size = new System.Drawing.Size(266, 32);
+            this.course_box.Size = new System.Drawing.Size(359, 32);
             this.course_box.TabIndex = 88;
             this.course_box.Tag = "";
             // 

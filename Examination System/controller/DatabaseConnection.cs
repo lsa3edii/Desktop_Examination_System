@@ -28,11 +28,14 @@ namespace Examination_System.controller
             catch (Exception ex)
             {
                 throw;
+                //throw new Exception("An error occurred: " + ex.Message, ex);
             }
+
             //finally
             //{
             //    connection.Close();
             //}
+
         }
     }
 }
