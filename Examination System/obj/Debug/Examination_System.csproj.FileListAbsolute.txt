@@ -40,3 +40,4 @@ D:\Desktop-Examination_System\Examination System\obj\Debug\Examination_System.cs
 D:\Desktop-Examination_System\Examination System\obj\Debug\Examinat.42BE0C5D.Up2Date
 D:\Desktop-Examination_System\Examination System\obj\Debug\Examination System.exe
 D:\Desktop-Examination_System\Examination System\obj\Debug\Examination System.pdb
+D:\Desktop-Examination_System\Examination System\obj\Debug\Examination_System.View.Admin.GenerateReports.resources
